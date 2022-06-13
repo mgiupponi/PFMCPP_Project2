@@ -17,12 +17,13 @@ video: Chapter 2 - Part 3
  1) Write down the names of the 6 major primitive types available in C++  here:
  
  
- 
- 
- 
- 
- 
- 
+Integer.
+Character.
+Boolean.
+Floating Point.
+Double Floating Point.
+Valueless or Void.
+
  
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
@@ -63,11 +64,30 @@ video: Chapter 2 - Part 3
 void variableDeclarations()
 {
     //example:
-    int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
+    // int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
+    int number = 2;
+    char character = 'a';
+    bool boolean = false; 
+    float floatingPoint = '1.2345';
+    double doubleFloatingPoint = '1.2345';
+    short shortType = '1.2';
 
+    int number2 = 2;
+    char character2 = 'a';
+    bool boolean2 = false; 
+    float floatingPoint2 = '1.2345';
+    double doubleFloatingPoint2 = '1.2345';
+    short shortType2 = '1.2';
+
+    int number3 = 2;
+    char character3 = 'a';
+    bool boolean3 = false; 
+    float floatingPoint3 = '1.2345';
+    double doubleFloatingPoint3 = '1.2345';
+    short shortType3 = '1.2';
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    //ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, character, boolean, floatingPoint, doubleFloatingPoint, shortType, number2, character2, boolean2, floatingPoint2, doubleFloatingPoint2, shortType2, number3, character3, boolean3, floatingPoint3, doubleFloatingPoint3, shortType3);
 }
 
 /*
@@ -75,9 +95,11 @@ void variableDeclarations()
  example:
  note: this example shows the result after completing steps 3-8
  */
-bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
+//bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
+bool rentACar(int rentalDuration, int carType = 0)
 { 
-    ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
+    //ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
+
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
 } 
 
@@ -85,41 +107,101 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  1)
  */
 
+bool ringThePhone(int ringDuration, int ringToneIdentifier = 0)
+{ 
+    //ignoreUnused(ringDuration, carTyringToneIdentifier);
+    return {};
+} 
+
 /*
  2)
  */
+
+bool turnOnServerLed(int ledColor, bool willLedBink = false)
+{ 
+    //ignoreUnused(ledColor, willLedBink);
+    return {};
+} 
 
 /*
  3)
  */
 
+bool pushButton(float secondsPressed, int buttonIdentifier = 0)
+{ 
+    //ignoreUnused(secondsPressed, buttonIdentifier);
+    return {};
+} 
+
 /*
  4)
  */
+
+bool switchAirconditionerToHeat(int roomNumber)
+{ 
+    //ignoreUnused(roomNumber);
+    return {};
+} 
 
 /*
  5)
  */
 
+bool changeConsoleDVD(int newDVDIdentifier)
+{ 
+    //ignoreUnused(newDVDIdentifier);
+    return {};
+} 
+
 /*
  6)
  */
+
+bool waterThePlants(int durationMinutes = 15, char startingDirection = 's')
+{ 
+    //ignoreUnused(durationMinutes, startingDirection);
+    return {};
+} 
 
 /*
  7)
  */
 
+bool goForABikeRide(int bikeModel = 0)
+{ 
+    //ignoreUnused(bikeModel);
+    return {};
+}
+
 /*
  8)
  */
+
+bool prepareCoffee(int numberOfCups, bool decaffeinated, int millilitersPerCup)
+{ 
+    //ignoreUnused(numberOfCups, decaffeinated, millilitersPerCup);
+    return {};
+}
 
 /*
  9)
  */
 
+bool sellCandies(int quantity = 1)
+{ 
+    //ignoreUnused(quantity);
+    return {};
+}
+
 /*
  10)
  */
+
+bool buyCigarettes(int quantity, bool minted = false)
+{ 
+    //ignoreUnused(quantity, minted);
+    return {};
+} 
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
