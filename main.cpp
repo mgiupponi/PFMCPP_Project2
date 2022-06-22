@@ -68,22 +68,22 @@ void variableDeclarations()
     int number = 2;
     char character = 'a';
     bool boolean = false; 
-    float floatingPoint = '3';
-    double doubleFloatingPoint = '4';
+    float floatingPoint = 4.12f;
+    double doubleFloatingPoint = 2.31;
     short shortType = '5';
 
     int number2 = 2;
     char character2 = 'a';
     bool boolean2 = false; 
-    float floatingPoint2 = '3';
-    double doubleFloatingPoint2 = '4';
+    float floatingPoint2 = 6.18f;
+    double doubleFloatingPoint2 = 8.51;
     short shortType2 = '5';
 
     int number3 = 2;
     char character3 = 'a';
     bool boolean3 = false; 
-    float floatingPoint3 = '3';
-    double doubleFloatingPoint3 = '4';
+    float floatingPoint3 = 3.81f;
+    double doubleFloatingPoint3 = 1.71;
     short shortType3 = '5';
     
     //ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
@@ -107,7 +107,7 @@ bool rentACar(int rentalDuration, int carType = 0)
  1)
  */
 
-bool ringThePhone(int ringDuration, int ringToneIdentifier = 0)
+double ringThePhone(float ringDuration, int ringToneIdentifier = 0)
 { 
     ignoreUnused(ringDuration, ringToneIdentifier);
     return {};
@@ -147,7 +147,7 @@ bool switchAirconditionerToHeat(int roomNumber)
  5)
  */
 
-bool changeConsoleDVD(int newDVDIdentifier)
+short changeConsoleDVD(int newDVDIdentifier)
 { 
     ignoreUnused(newDVDIdentifier);
     return {};
@@ -157,7 +157,7 @@ bool changeConsoleDVD(int newDVDIdentifier)
  6)
  */
 
-bool waterThePlants(int durationMinutes = 15, char startingDirection = 's')
+int waterThePlants(int durationMinutes = 15, char startingDirection = 's')
 { 
     ignoreUnused(durationMinutes, startingDirection);
     return {};
@@ -177,7 +177,7 @@ bool goForABikeRide(int bikeModel = 0)
  8)
  */
 
-void prepareCoffee(int numberOfCups, bool decaffeinated, int millilitersPerCup)
+void prepareCoffee(int numberOfCups, bool decaffeinated, double millilitersPerCup)
 { 
     ignoreUnused(numberOfCups, decaffeinated, millilitersPerCup);
     // return {};
@@ -187,7 +187,7 @@ void prepareCoffee(int numberOfCups, bool decaffeinated, int millilitersPerCup)
  9)
  */
 
-bool sellCandies(int quantity = 1)
+float sellCandies(int quantity = 1)
 { 
     ignoreUnused(quantity);
     return {};
@@ -226,37 +226,37 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    auto phoneRinged = ringThePhone(10);
+    auto ringDecibels = ringThePhone(10.3f);
 
     //2)
     auto ledTurnedOn = turnOnServerLed(4, true);
     
     //3)
-    auto buttonPushed = pushButton(3, 5);
+    auto buttonPushed = pushButton(3.34f, 5);
     
     //4)
     auto acAlive = switchAirconditionerToHeat(2);
     
     //5)
-    auto DVDChanged = changeConsoleDVD(344);
+    auto secondsTaken = changeConsoleDVD(344);
     
     //6)
-    auto plantsWatered = waterThePlants(25,'n');
+    auto numberOfPlants = waterThePlants(25,'n');
     
     //7)
     auto bikeAvailable = goForABikeRide(8);
     
     //8)
-    prepareCoffee(5, false, 200);
+    prepareCoffee(5, false, 212.34);
     
     //9)
-    auto wereCandiesSold = sellCandies();
+    auto moneyMade = sellCandies();
     
     //10)
     auto pricePayed = buyCigarettes(20, true);
     
     //ignoreUnused(carRented);
-    ignoreUnused(carRented,phoneRinged,ledTurnedOn,buttonPushed,acAlive,DVDChanged,plantsWatered,bikeAvailable,wereCandiesSold,pricePayed);
+    ignoreUnused(carRented,ringDecibels,ledTurnedOn,buttonPushed,acAlive,secondsTaken,numberOfPlants,bikeAvailable,moneyMade,pricePayed);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
