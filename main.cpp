@@ -68,23 +68,23 @@ void variableDeclarations()
     int number = 2;
     char character = 'a';
     bool boolean = false; 
-    float floatingPoint = '1.2345';
-    double doubleFloatingPoint = '1.2345';
-    short shortType = '1.2';
+    float floatingPoint = '3';
+    double doubleFloatingPoint = '4';
+    short shortType = '5';
 
     int number2 = 2;
     char character2 = 'a';
     bool boolean2 = false; 
-    float floatingPoint2 = '1.2345';
-    double doubleFloatingPoint2 = '1.2345';
-    short shortType2 = '1.2';
+    float floatingPoint2 = '3';
+    double doubleFloatingPoint2 = '4';
+    short shortType2 = '5';
 
     int number3 = 2;
     char character3 = 'a';
     bool boolean3 = false; 
-    float floatingPoint3 = '1.2345';
-    double doubleFloatingPoint3 = '1.2345';
-    short shortType3 = '1.2';
+    float floatingPoint3 = '3';
+    double doubleFloatingPoint3 = '4';
+    short shortType3 = '5';
     
     //ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
     ignoreUnused(number, character, boolean, floatingPoint, doubleFloatingPoint, shortType, number2, character2, boolean2, floatingPoint2, doubleFloatingPoint2, shortType2, number3, character3, boolean3, floatingPoint3, doubleFloatingPoint3, shortType3);
@@ -98,7 +98,7 @@ void variableDeclarations()
 //bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
 bool rentACar(int rentalDuration, int carType = 0)
 { 
-    //ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
+    ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
 
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
 } 
@@ -109,7 +109,7 @@ bool rentACar(int rentalDuration, int carType = 0)
 
 bool ringThePhone(int ringDuration, int ringToneIdentifier = 0)
 { 
-    //ignoreUnused(ringDuration, carTyringToneIdentifier);
+    ignoreUnused(ringDuration, ringToneIdentifier);
     return {};
 } 
 
@@ -119,7 +119,7 @@ bool ringThePhone(int ringDuration, int ringToneIdentifier = 0)
 
 bool turnOnServerLed(int ledColor, bool willLedBink = false)
 { 
-    //ignoreUnused(ledColor, willLedBink);
+    ignoreUnused(ledColor, willLedBink);
     return {};
 } 
 
@@ -129,7 +129,7 @@ bool turnOnServerLed(int ledColor, bool willLedBink = false)
 
 bool pushButton(float secondsPressed, int buttonIdentifier = 0)
 { 
-    //ignoreUnused(secondsPressed, buttonIdentifier);
+    ignoreUnused(secondsPressed, buttonIdentifier);
     return {};
 } 
 
@@ -139,7 +139,7 @@ bool pushButton(float secondsPressed, int buttonIdentifier = 0)
 
 bool switchAirconditionerToHeat(int roomNumber)
 { 
-    //ignoreUnused(roomNumber);
+    ignoreUnused(roomNumber);
     return {};
 } 
 
@@ -149,7 +149,7 @@ bool switchAirconditionerToHeat(int roomNumber)
 
 bool changeConsoleDVD(int newDVDIdentifier)
 { 
-    //ignoreUnused(newDVDIdentifier);
+    ignoreUnused(newDVDIdentifier);
     return {};
 } 
 
@@ -159,7 +159,7 @@ bool changeConsoleDVD(int newDVDIdentifier)
 
 bool waterThePlants(int durationMinutes = 15, char startingDirection = 's')
 { 
-    //ignoreUnused(durationMinutes, startingDirection);
+    ignoreUnused(durationMinutes, startingDirection);
     return {};
 } 
 
@@ -169,7 +169,7 @@ bool waterThePlants(int durationMinutes = 15, char startingDirection = 's')
 
 bool goForABikeRide(int bikeModel = 0)
 { 
-    //ignoreUnused(bikeModel);
+    ignoreUnused(bikeModel);
     return {};
 }
 
@@ -177,10 +177,10 @@ bool goForABikeRide(int bikeModel = 0)
  8)
  */
 
-bool prepareCoffee(int numberOfCups, bool decaffeinated, int millilitersPerCup)
+void prepareCoffee(int numberOfCups, bool decaffeinated, int millilitersPerCup)
 { 
-    //ignoreUnused(numberOfCups, decaffeinated, millilitersPerCup);
-    return {};
+    ignoreUnused(numberOfCups, decaffeinated, millilitersPerCup);
+    // return {};
 }
 
 /*
@@ -189,7 +189,7 @@ bool prepareCoffee(int numberOfCups, bool decaffeinated, int millilitersPerCup)
 
 bool sellCandies(int quantity = 1)
 { 
-    //ignoreUnused(quantity);
+    ignoreUnused(quantity);
     return {};
 }
 
@@ -197,11 +197,14 @@ bool sellCandies(int quantity = 1)
  10)
  */
 
-bool buyCigarettes(int quantity, bool minted = false)
+short buyCigarettes(int quantity, bool minted = false)
 { 
-    //ignoreUnused(quantity, minted);
+    ignoreUnused(quantity, minted);
     return {};
 } 
+
+
+
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -223,27 +226,37 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto phoneRinged = ringThePhone(10);
+
     //2)
+    auto ledTurnedOn = turnOnServerLed(4, true);
     
     //3)
+    auto buttonPushed = pushButton(3, 5);
     
     //4)
+    auto acAlive = switchAirconditionerToHeat(2);
     
     //5)
+    auto DVDChanged = changeConsoleDVD(344);
     
     //6)
+    auto plantsWatered = waterThePlants(25,'n');
     
     //7)
+    auto bikeAvailable = goForABikeRide(8);
     
     //8)
+    prepareCoffee(5, false, 200);
     
     //9)
+    auto wereCandiesSold = sellCandies();
     
     //10)
+    auto pricePayed = buyCigarettes(20, true);
     
-    
-    ignoreUnused(carRented);
+    //ignoreUnused(carRented);
+    ignoreUnused(carRented,phoneRinged,ledTurnedOn,buttonPushed,acAlive,DVDChanged,plantsWatered,bikeAvailable,wereCandiesSold,pricePayed);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
