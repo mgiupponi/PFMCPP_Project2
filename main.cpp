@@ -17,12 +17,13 @@ video: Chapter 2 - Part 3
  1) Write down the names of the 6 major primitive types available in C++  here:
  
  
- 
- 
- 
- 
- 
- 
+Integer.
+Character.
+Boolean.
+Floating Point.
+Double Floating Point.
+Valueless or Void.
+
  
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
@@ -63,11 +64,30 @@ video: Chapter 2 - Part 3
 void variableDeclarations()
 {
     //example:
-    int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
+    // int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
+    int number = 2;
+    char character = 'a';
+    bool boolean = false; 
+    float floatingPoint = 4.12f;
+    double doubleFloatingPoint = 2.31;
+    short shortType = '5';
 
+    int number2 = 2;
+    char character2 = 'a';
+    bool boolean2 = false; 
+    float floatingPoint2 = 6.18f;
+    double doubleFloatingPoint2 = 8.51;
+    short shortType2 = '5';
+
+    int number3 = 2;
+    char character3 = 'a';
+    bool boolean3 = false; 
+    float floatingPoint3 = 3.81f;
+    double doubleFloatingPoint3 = 1.71;
+    short shortType3 = '5';
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    //ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, character, boolean, floatingPoint, doubleFloatingPoint, shortType, number2, character2, boolean2, floatingPoint2, doubleFloatingPoint2, shortType2, number3, character3, boolean3, floatingPoint3, doubleFloatingPoint3, shortType3);
 }
 
 /*
@@ -75,9 +95,11 @@ void variableDeclarations()
  example:
  note: this example shows the result after completing steps 3-8
  */
-bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
+//bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
+bool rentACar(int rentalDuration, int carType = 0)
 { 
     ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
+
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
 } 
 
@@ -85,41 +107,104 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  1)
  */
 
+double ringThePhone(float ringDuration, int ringToneIdentifier = 0)
+{ 
+    ignoreUnused(ringDuration, ringToneIdentifier);
+    return {};
+} 
+
 /*
  2)
  */
+
+bool turnOnServerLed(int ledColor, bool willLedBink = false)
+{ 
+    ignoreUnused(ledColor, willLedBink);
+    return {};
+} 
 
 /*
  3)
  */
 
+bool pushButton(float secondsPressed, int buttonIdentifier = 0)
+{ 
+    ignoreUnused(secondsPressed, buttonIdentifier);
+    return {};
+} 
+
 /*
  4)
  */
+
+bool switchAirconditionerToHeat(int roomNumber)
+{ 
+    ignoreUnused(roomNumber);
+    return {};
+} 
 
 /*
  5)
  */
 
+short changeConsoleDVD(int newDVDIdentifier)
+{ 
+    ignoreUnused(newDVDIdentifier);
+    return {};
+} 
+
 /*
  6)
  */
+
+int waterThePlants(int durationMinutes = 15, char startingDirection = 's')
+{ 
+    ignoreUnused(durationMinutes, startingDirection);
+    return {};
+} 
 
 /*
  7)
  */
 
+bool goForABikeRide(int bikeModel = 0)
+{ 
+    ignoreUnused(bikeModel);
+    return {};
+}
+
 /*
  8)
  */
+
+void prepareCoffee(int numberOfCups, bool decaffeinated, double millilitersPerCup)
+{ 
+    ignoreUnused(numberOfCups, decaffeinated, millilitersPerCup);
+    // return {};
+}
 
 /*
  9)
  */
 
+float sellCandies(int quantity = 1)
+{ 
+    ignoreUnused(quantity);
+    return {};
+}
+
 /*
  10)
  */
+
+short buyCigarettes(int quantity, bool minted = false)
+{ 
+    ignoreUnused(quantity, minted);
+    return {};
+} 
+
+
+
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -141,27 +226,37 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto ringDecibels = ringThePhone(10.3f);
+
     //2)
+    auto ledTurnedOn = turnOnServerLed(4, true);
     
     //3)
+    auto buttonPushed = pushButton(3.34f, 5);
     
     //4)
+    auto acAlive = switchAirconditionerToHeat(2);
     
     //5)
+    auto secondsTaken = changeConsoleDVD(344);
     
     //6)
+    auto numberOfPlants = waterThePlants(25,'n');
     
     //7)
+    auto bikeAvailable = goForABikeRide(8);
     
     //8)
+    prepareCoffee(5, false, 212.34);
     
     //9)
+    auto moneyMade = sellCandies();
     
     //10)
+    auto pricePayed = buyCigarettes(20, true);
     
-    
-    ignoreUnused(carRented);
+    //ignoreUnused(carRented);
+    ignoreUnused(carRented,ringDecibels,ledTurnedOn,buttonPushed,acAlive,secondsTaken,numberOfPlants,bikeAvailable,moneyMade,pricePayed);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
